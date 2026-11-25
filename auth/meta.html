@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Returning to JARVIS</title>
+<style>
+  body{margin:0;background:#000;color:#f2f2f2;font-family:-apple-system,"Segoe UI",sans-serif;display:flex;align-items:center;justify-content:center;height:100vh;text-align:center}
+  .p{border:1px solid #2a2a2d;border-radius:22px;padding:28px 36px;background:#0b0b0c;max-width:420px}
+  h2{margin:0 0 8px;font-weight:600} p{color:#8a8a8e;margin:0} a{color:#fff}
+</style>
+</head>
+<body>
+<div class="p"><h2>Returning to JARVIS…</h2>
+<p id="m">Finishing your sign-in on this computer.</p></div>
+<script>
+  // Relay: Meta only returns sign-ins to a registered https address, so it
+  // lands here and is handed to JARVIS listening on this computer. The code
+  // never leaves this browser except to JARVIS on localhost.
+  (function () {
+    var q = location.search || "";
+    if (!/[?&](code|error)=/.test(q)) {
+      document.getElementById("m").textContent = "Nothing to finish here. You can close this window.";
+      return;
+    }
+    var target = "http://localhost:53682/meta" + q;
+    document.getElementById("m").innerHTML = 'If nothing happens, <a href="' + target + '">click here</a>. JARVIS must be running.';
+    location.replace(target);
+  })();
+</script>
+</body>
+</html>
