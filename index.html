@@ -3,53 +3,182 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>JARVIS Assistant</title>
-<meta name="description" content="JARVIS is a personal voice assistant that runs on your own computer.">
-<style>
-  :root { --bg:#000; --card:#0b0b0c; --line:#2a2a2d; --text:#f2f2f2; --dim:#8a8a8e; }
-  * { box-sizing:border-box; }
-  body { margin:0; background:var(--bg); color:var(--text);
-         font:16px/1.6 -apple-system, "Segoe UI", Roboto, sans-serif; }
-  main { max-width:720px; margin:0 auto; padding:64px 16px; }
-  .pill { display:inline-block; padding:8px 18px; border:1px solid var(--line);
-          border-radius:999px; background:var(--card); color:var(--dim); font-size:13px; letter-spacing:.08em; }
-  h1 { font-size:44px; font-weight:600; letter-spacing:.04em; margin:20px 0 8px; }
-  p { color:#c9c9cc; }
-  .card { background:var(--card); border:1px solid var(--line); border-radius:22px; padding:22px 24px; margin:18px 0; }
-  h2 { font-size:18px; margin:0 0 6px; }
-  ul { margin:6px 0 0; padding-left:20px; color:#c9c9cc; }
-  a { color:var(--text); }
-  footer { margin-top:40px; color:var(--dim); font-size:14px; }
-</style>
+<title>JARVIS — your personal AI assistant</title>
+<meta name="description" content="JARVIS is a voice assistant that lives on your own Windows or Mac computer: it talks, sees your screen, runs your apps, handles your email and social accounts, and warns you when your PC has a problem.">
+<meta property="og:title" content="JARVIS — your personal AI assistant">
+<meta property="og:description" content="JARVIS is a voice assistant that lives on your own Windows or Mac computer: it talks, sees your screen, runs your apps, handles your email and social accounts, and warns you when your PC has a problem.">
+<meta property="og:image" content="assets/icon.png">
+<meta name="theme-color" content="#000000">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/icon.png">
+<link rel="stylesheet" href="assets/style.css">
+<script type="importmap">{"imports": {"three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+ "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}</script>
+<script src="assets/site.js" defer></script>
 </head>
-<body>
-<main>
-  <span class="pill">PERSONAL AI ASSISTANT</span>
-  <h1>JARVIS</h1>
-  <p>JARVIS is a voice assistant that runs on your own Windows or Mac computer. You talk to it,
-     and it helps with your PC, your email and your social accounts. It's a personal project,
-     shared with friends.</p>
-
-  <div class="card">
-    <h2>What it can do</h2>
-    <ul>
-      <li>Answer questions and control your computer by voice</li>
-      <li>Read and draft Gmail messages (sending always asks you first)</li>
-      <li>Show your YouTube channel stats and upload videos you choose</li>
-      <li>Show and publish to your Facebook Page and Instagram professional account</li>
-      <li>Warn you about crashes and errors on your computer</li>
-    </ul>
+<body data-page="index">
+<nav class="nav" aria-label="Main">
+  <a class="brand" href="index.html"><span class="dot"></span>JARVIS</a>
+  <button class="menu-btn" aria-label="Menu"><span></span><span></span></button>
+  <div class="links">
+    <a class="link" data-page="index" href="index.html">Home</a>
+    <a class="link" data-page="features" href="features.html">Features</a>
+    <a class="link" data-page="download" href="download.html">Download</a>
+    <a class="link" data-page="security" href="security.html">Security</a>
+    <a class="link" data-page="privacy" href="privacy.html">Privacy</a>
   </div>
+  <a class="btn primary small cta" href="download.html">Get JARVIS</a>
+</nav>
 
-  <div class="card">
-    <h2>Your data stays with you</h2>
-    <p>JARVIS has no servers of its own. Your sign-ins are saved only on your own computer,
-       and you can disconnect any account at any time. Read the
-       <a href="privacy.html">privacy policy</a>.</p>
+<header class="hero">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow"><span class="dot" style="width:6px;height:6px;border-radius:50%;background:#fff"></span> Mark LVII · Windows &amp; Mac</span>
+      <h1><span class="grad">Your computer,<br>finally listening.</span></h1>
+      <p class="lead">JARVIS is a personal AI assistant that lives on your own PC. Talk to it like a person: it answers,
+        works your apps for you, reads your email, runs your socials and tells you when something breaks.</p>
+      <div class="actions">
+        <a class="btn primary" href="download.html">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0-4-4m4 4 4-4M4 19h16"/></svg>
+          Get JARVIS — free</a>
+        <a class="btn" href="features.html">See what it does</a>
+      </div>
+    </div>
+    <div class="stage reveal" id="stage">
+      <div class="glow"></div>
+      <div class="stage-modes">
+        <button data-mode="orb" class="on">Orb</button>
+        <button data-mode="face">Face</button>
+      </div>
+      <span class="stage-hint">Drag to rotate · scroll or pinch to zoom</span>
+    </div>
   </div>
+</header>
 
-  <footer>Contact: <a href="mailto:samrath.rawatt@gmail.com">samrath.rawatt@gmail.com</a>
-    · <a href="privacy.html">Privacy policy</a></footer>
-</main>
+<section style="padding-top:40px">
+  <div class="wrap center">
+    <div class="section-head reveal">
+      <span class="eyebrow">The island</span>
+      <h2>Subtitles for everything<br>you and JARVIS say.</h2>
+      <p class="lead">A black pill at the top of your screen shows the conversation live, word by word as it's spoken,
+        over any app. Hover it for controls. Right-click to make it yours.</p>
+    </div>
+    <div class="island-demo reveal" aria-live="polite">
+      <div class="top"><span class="who"><span class="light"></span><span data-who>YOU</span></span>
+        <span class="bars"><i></i><i></i><i></i><i></i><i></i></span></div>
+      <div class="caption"></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <span class="eyebrow">What it does</span>
+      <h2>One voice for your whole computer.</h2>
+    </div>
+    <div class="grid c3">
+      <div class="card reveal">
+        <div class="icon"><svg viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></div>
+        <h3>Talk, don't type</h3><p>Real-time voice conversation powered by Gemini Live. Interrupt it, ask follow-ups, switch languages.</p>
+      </div>
+      <div class="card reveal">
+        <div class="icon"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H4zM8 20h8M12 16v4"/><path d="m9 9 2 2 4-4"/></svg></div>
+        <h3>Autopilot</h3><p>"Play this game for me." "Find the best phone and add it to my cart." JARVIS sees the screen and does it, and never pays for you.</p>
+      </div>
+      <div class="card reveal">
+        <div class="icon"><svg viewBox="0 0 24 24"><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="18" cy="18" r="2.5"/><path d="m8.2 10.8 7.6-3.6M8.2 13.2l7.6 3.6"/></svg></div>
+        <h3>All your socials</h3><p>Gmail, YouTube, Instagram, Facebook and WhatsApp in one place. Check, reply, post and call, by voice.</p>
+      </div>
+      <div class="card reveal">
+        <div class="icon"><svg viewBox="0 0 24 24"><path d="M12 3 3 20h18L12 3z"/><path d="M12 10v4M12 17h.01"/></svg></div>
+        <h3>PC health alerts</h3><p>Crashes, blue screens, failing disks, overheating: JARVIS notices before you do and tells you what to do.</p>
+      </div>
+      <div class="card reveal">
+        <div class="icon"><svg viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2.5"/><path d="M11 18h2"/></svg></div>
+        <h3>Your phone is the remote</h3><p>Call JARVIS from your phone from anywhere and have it do things on your PC while you're away.</p>
+      </div>
+      <div class="card reveal">
+        <div class="icon"><svg viewBox="0 0 24 24"><rect x="4" y="10" width="16" height="11" rx="2.5"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></div>
+        <h3>Private by design</h3><p>No JARVIS servers. Your sign-ins stay on your computer, and anything that sends, posts or pays waits for you.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="stats reveal">
+      <div><b>27</b><span>built-in skills</span></div>
+      <div><b>5</b><span>social accounts</span></div>
+      <div><b>0</b><span>JARVIS servers</span></div>
+      <div><b>2</b><span>platforms: Windows &amp; Mac</span></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <span class="eyebrow">Get going in minutes</span>
+      <h2>Install, talk, connect.</h2>
+    </div>
+    <div class="grid c3">
+      <div class="card reveal"><span class="tag">Step 1</span><h3>Install</h3><p>Windows: run JARVIS. Mac: double-click the installer. It sets everything up for you.</p></div>
+      <div class="card reveal"><span class="tag">Step 2</span><h3>Say hello</h3><p>Paste a free Gemini key once, then just talk. JARVIS greets you with a morning brief.</p></div>
+      <div class="card reveal"><span class="tag">Step 3</span><h3>Connect</h3><p>Open the Social drawer and sign in to Google or Facebook in one popup, the way you would on any app.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap" style="max-width:820px">
+    <div class="section-head center reveal"><span class="eyebrow">FAQ</span><h2>Questions</h2></div>
+    <div class="reveal">
+      <details><summary>Is JARVIS free?</summary><p>Yes. JARVIS itself is free. It talks through Google's Gemini API using your own key, which has a free tier.</p></details>
+      <details><summary>Does it work on Mac?</summary><p>Yes, on macOS 11 or newer, on both Apple silicon and Intel. Everything works except WhatsApp control, which needs the Windows WhatsApp app.</p></details>
+      <details><summary>Can it spend my money or post without asking?</summary><p>No. Sending email, posting, uploading and WhatsApp messages wait for you to press Confirm, and Autopilot always stops before checkout or payment.</p></details>
+      <details><summary>Where does my data go?</summary><p>It stays on your computer. Your requests go to the AI model you choose, and your account data goes straight between your PC and Google or Meta. See the <a href="privacy.html">privacy policy</a>.</p></details>
+      <details><summary>Why does Google say the app is unverified?</summary><p>JARVIS is a personal project, not a company app that has paid for Google's review. Click Advanced, then Go to JARVIS, once. It's still Google's own sign-in page.</p></details>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:20px">
+  <div class="wrap">
+    <div class="band reveal">
+      <h2><span class="grad">Meet your JARVIS.</span></h2>
+      <p class="lead" style="margin:0 auto">Free for Windows and Mac. Two minutes to install.</p>
+      <div class="actions"><a class="btn primary" href="download.html">Download</a><a class="btn" href="security.html">How it stays safe</a></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <a class="brand" href="index.html" style="display:flex;gap:10px;align-items:center;color:var(--text);font-weight:600;letter-spacing:.22em">
+          <span class="dot" style="width:9px;height:9px;border-radius:50%;background:#fff;box-shadow:0 0 12px 3px rgba(255,255,255,.5)"></span>JARVIS</a>
+        <p style="max-width:320px;margin-top:12px">A personal AI assistant that lives on your own computer. Made by Samrath Rawat.</p>
+      </div>
+      <div><h4>Product</h4><a href="features.html">Features</a><a href="download.html">Download</a><a href="index.html#faq">FAQ</a></div>
+      <div><h4>Trust</h4><a href="security.html">Security</a><a href="privacy.html">Privacy policy</a><a href="terms.html">Terms</a></div>
+      <div><h4>Contact</h4><a href="mailto:samrath.rawatt@gmail.com">Email</a><a href="https://github.com/Samrath777/jarvis-assistant">GitHub</a></div>
+    </div>
+    <div class="fine">
+      <span>© <span data-year>2026</span> JARVIS Assistant. Not affiliated with Marvel or Disney.</span>
+      <span>3D face: MediaPipe canonical face model, © Google, Apache-2.0. 3D: three.js (MIT).</span>
+    </div>
+  </div>
+</footer>
+
+<script type="module">
+  import { mountHologram } from "./assets/hologram.js";
+  const stage = document.getElementById("stage");
+  mountHologram(stage, { faceUrl: "assets/face_model.obj", mode: "orb",
+    modeButtons: [...stage.querySelectorAll(".stage-modes button")] })
+    .catch((e) => { stage.querySelector(".stage-hint").textContent = "3D view needs WebGL"; console.error(e); });
+</script>
 </body>
 </html>

@@ -3,80 +3,126 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>JARVIS Privacy Policy</title>
-<style>
-  :root { --bg:#000; --card:#0b0b0c; --line:#2a2a2d; --text:#f2f2f2; --dim:#8a8a8e; }
-  * { box-sizing:border-box; }
-  body { margin:0; background:var(--bg); color:var(--text);
-         font:16px/1.65 -apple-system, "Segoe UI", Roboto, sans-serif; }
-  main { max-width:760px; margin:0 auto; padding:56px 16px; }
-  h1 { font-size:34px; font-weight:600; margin:0 0 4px; }
-  .dim { color:var(--dim); font-size:14px; }
-  h2 { font-size:19px; margin:32px 0 6px; }
-  p, li { color:#c9c9cc; }
-  .card { background:var(--card); border:1px solid var(--line); border-radius:18px; padding:18px 22px; margin:16px 0; }
-  a { color:var(--text); }
-</style>
+<title>Privacy Policy — JARVIS</title>
+<meta name="description" content="What JARVIS accesses, where your data goes, and how to remove access. JARVIS has no servers and keeps your sign-ins on your own computer.">
+<meta property="og:title" content="Privacy Policy — JARVIS">
+<meta property="og:description" content="What JARVIS accesses, where your data goes, and how to remove access. JARVIS has no servers and keeps your sign-ins on your own computer.">
+<meta property="og:image" content="assets/icon.png">
+<meta name="theme-color" content="#000000">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/icon.png">
+<link rel="stylesheet" href="assets/style.css">
+<script type="importmap">{"imports": {"three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+ "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}</script>
+<script src="assets/site.js" defer></script>
 </head>
-<body>
-<main>
-  <p><a href="index.html">← JARVIS</a></p>
-  <h1>Privacy Policy</h1>
-  <p class="dim">JARVIS Assistant · Last updated 25 November 2026</p>
+<body data-page="privacy">
+<nav class="nav" aria-label="Main">
+  <a class="brand" href="index.html"><span class="dot"></span>JARVIS</a>
+  <button class="menu-btn" aria-label="Menu"><span></span><span></span></button>
+  <div class="links">
+    <a class="link" data-page="index" href="index.html">Home</a>
+    <a class="link" data-page="features" href="features.html">Features</a>
+    <a class="link" data-page="download" href="download.html">Download</a>
+    <a class="link" data-page="security" href="security.html">Security</a>
+    <a class="link" data-page="privacy" href="privacy.html">Privacy</a>
+  </div>
+  <a class="btn primary small cta" href="download.html">Get JARVIS</a>
+</nav>
 
-  <div class="card">
-    <p><strong>In short:</strong> JARVIS runs on your own computer. It has no servers of its own,
-    and it does not sell, share or collect your data. The accounts you connect are used only to do
-    what you ask, and your sign-ins are stored only on your computer.</p>
+<main class="doc">
+  <span class="eyebrow">Legal</span>
+  <h1>Privacy Policy</h1>
+  <p class="muted">JARVIS Assistant · Last updated 25 November 2026</p>
+  <div class="toc">
+    <a href="#who">Who we are</a><a href="#access">What JARVIS accesses</a><a href="#where">Where data goes</a>
+    <a href="#google">Google user data</a><a href="#meta">Meta data</a><a href="#remote">Phone remote</a>
+    <a href="#delete">Removing access</a><a href="#children">Children</a><a href="#changes">Changes</a>
   </div>
 
-  <h2>Who we are</h2>
+  <div class="summary">
+    <p style="margin:0"><strong>In short:</strong> JARVIS runs on your own computer. It has no servers of its own, and its
+      developer never receives your data. The accounts you connect are used only to do what you ask, and your sign-ins
+      are stored only on your computer. Nothing is sold, used for ads, or used to train AI.</p>
+  </div>
+
+  <h2 id="who">Who we are</h2>
   <p>JARVIS is a personal desktop assistant made by Samrath Rawat and shared with friends.
      Contact: <a href="mailto:samrath.rawatt@gmail.com">samrath.rawatt@gmail.com</a>.</p>
 
-  <h2>What JARVIS accesses, and only when you connect it</h2>
+  <h2 id="access">What JARVIS accesses, and only when you connect it</h2>
   <ul>
-    <li><strong>Gmail</strong>: to list, search and read your messages, save drafts and send
-        email. Sending always waits for you to confirm on screen.</li>
-    <li><strong>YouTube</strong>: to show your channel and video statistics, edit your videos'
-        titles and descriptions, and upload a video you choose (after you confirm).</li>
-    <li><strong>Facebook Page and Instagram professional account</strong>: to show your posts,
-        comments and insights, and to publish a post you approve.</li>
-    <li><strong>Your computer</strong>: the microphone while you talk to JARVIS, the screen when
-        you ask it to do something on screen, and error logs to warn you about crashes.</li>
+    <li><strong>Gmail</strong>: to list, search and read your messages, save drafts and send email. Sending always
+        waits for you to confirm on screen.</li>
+    <li><strong>YouTube</strong>: to show your channel and video statistics, edit your videos' titles and
+        descriptions, and upload a video you choose after you confirm.</li>
+    <li><strong>Facebook Page and Instagram professional account</strong>: to show your posts, comments and insights,
+        and to publish a post you approve.</li>
+    <li><strong>WhatsApp (Windows)</strong>: JARVIS operates the WhatsApp app on your PC to read unread chats, send a
+        message you confirm, or start a call. It does not copy or store your chats.</li>
+    <li><strong>Your computer</strong>: the microphone while you talk to JARVIS, the screen when you ask it to look or
+        act, and system error logs to warn you about crashes.</li>
   </ul>
 
-  <h2>Where your data goes</h2>
+  <h2 id="where">Where your data goes</h2>
   <ul>
-    <li>Sign-in tokens are saved in a settings file on your own computer, and never sent to us.</li>
-    <li>Your requests, and the information needed to answer them, are sent to the AI model you
-        set up (by default Google's Gemini API, with your own API key), so it can reply. That is
-        covered by Google's terms for the Gemini API.</li>
-    <li>Data from Google, Meta and other services goes directly between your computer and that
-        service. JARVIS's developer never receives it.</li>
-    <li>We do not sell data, show ads, or use your data to train AI models.</li>
+    <li>Sign-in tokens are saved in a settings file on your own computer, and are never sent to the developer.</li>
+    <li>Your requests, and the information needed to answer them, go to the AI model you set up (by default Google's
+        Gemini API, with your own key). That is covered by that provider's terms.</li>
+    <li>Data from Google, Meta and other services goes directly between your computer and that service.</li>
+    <li>JARVIS does not sell data, show ads, or use your data to train AI models.</li>
   </ul>
 
-  <h2>Google user data</h2>
+  <h2 id="google">Google user data</h2>
   <p>JARVIS's use and transfer of information received from Google APIs adheres to the
-     <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services
-     User Data Policy</a>, including the Limited Use requirements. Gmail and YouTube data is used
-     only to provide the features you ask for, and is never transferred to anyone else, except to
-     the AI model you configured when your request needs it, as described above.</p>
+     <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>,
+     including the Limited Use requirements. Gmail and YouTube data is used only to provide the features you ask for.
+     It is never transferred to anyone else, except to the AI model you configured when your request needs it, as
+     described above. It is never used for advertising, and no human reads it.</p>
 
-  <h2>Keeping and deleting your data</h2>
+  <h2 id="meta">Meta (Facebook and Instagram) data</h2>
+  <p>Data from Meta's APIs is used only to show you your own Page and Instagram content and to publish what you
+     approve, in line with Meta's Platform Terms. It is not stored beyond your computer's settings file, not shared, and
+     not used to build profiles.</p>
+
+  <h2 id="remote">Phone remote</h2>
+  <p>If you use the Android remote away from home, the connection between your phone and your PC passes through
+     Cloudflare's tunnel service in encrypted form (HTTPS with an extra AES-256 layer). Cloudflare relays it but does
+     not store your commands. On home Wi-Fi the phone talks to your PC directly.</p>
+
+  <h2 id="delete">Keeping and removing your data</h2>
   <p>JARVIS keeps sign-ins until you disconnect. You can remove access at any time:</p>
   <ul>
     <li>Google: <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a></li>
-    <li>Facebook and Instagram: Facebook Settings &gt; Business integrations</li>
-    <li>Or delete JARVIS's settings file on your computer (<code>config/api_keys.json</code>).</li>
+    <li>Facebook and Instagram: Facebook Settings › Business integrations</li>
+    <li>Or delete JARVIS's settings file on your computer (<code>config/api_keys.json</code>), or uninstall JARVIS.</li>
   </ul>
 
-  <h2>Children</h2>
+  <h2 id="children">Children</h2>
   <p>JARVIS is not intended for children under 13.</p>
 
-  <h2>Changes</h2>
-  <p>If this policy changes, the date at the top will change too.</p>
+  <h2 id="changes">Changes</h2>
+  <p>If this policy changes, the date at the top changes too. Questions:
+     <a href="mailto:samrath.rawatt@gmail.com">samrath.rawatt@gmail.com</a>.</p>
 </main>
+
+<footer>
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <a class="brand" href="index.html" style="display:flex;gap:10px;align-items:center;color:var(--text);font-weight:600;letter-spacing:.22em">
+          <span class="dot" style="width:9px;height:9px;border-radius:50%;background:#fff;box-shadow:0 0 12px 3px rgba(255,255,255,.5)"></span>JARVIS</a>
+        <p style="max-width:320px;margin-top:12px">A personal AI assistant that lives on your own computer. Made by Samrath Rawat.</p>
+      </div>
+      <div><h4>Product</h4><a href="features.html">Features</a><a href="download.html">Download</a><a href="index.html#faq">FAQ</a></div>
+      <div><h4>Trust</h4><a href="security.html">Security</a><a href="privacy.html">Privacy policy</a><a href="terms.html">Terms</a></div>
+      <div><h4>Contact</h4><a href="mailto:samrath.rawatt@gmail.com">Email</a><a href="https://github.com/Samrath777/jarvis-assistant">GitHub</a></div>
+    </div>
+    <div class="fine">
+      <span>© <span data-year>2026</span> JARVIS Assistant. Not affiliated with Marvel or Disney.</span>
+      <span>3D face: MediaPipe canonical face model, © Google, Apache-2.0. 3D: three.js (MIT).</span>
+    </div>
+  </div>
+</footer>
 </body>
 </html>

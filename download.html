@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Download — JARVIS</title>
+<meta name="description" content="Install JARVIS on Windows or macOS in a few minutes, plus the Android phone remote.">
+<meta property="og:title" content="Download — JARVIS">
+<meta property="og:description" content="Install JARVIS on Windows or macOS in a few minutes, plus the Android phone remote.">
+<meta property="og:image" content="assets/icon.png">
+<meta name="theme-color" content="#000000">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/icon.png">
+<link rel="stylesheet" href="assets/style.css">
+<script type="importmap">{"imports": {"three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+ "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}</script>
+<script src="assets/site.js" defer></script>
+</head>
+<body data-page="download">
+<nav class="nav" aria-label="Main">
+  <a class="brand" href="index.html"><span class="dot"></span>JARVIS</a>
+  <button class="menu-btn" aria-label="Menu"><span></span><span></span></button>
+  <div class="links">
+    <a class="link" data-page="index" href="index.html">Home</a>
+    <a class="link" data-page="features" href="features.html">Features</a>
+    <a class="link" data-page="download" href="download.html">Download</a>
+    <a class="link" data-page="security" href="security.html">Security</a>
+    <a class="link" data-page="privacy" href="privacy.html">Privacy</a>
+  </div>
+  <a class="btn primary small cta" href="download.html">Get JARVIS</a>
+</nav>
+
+<section style="padding:170px 0 60px">
+  <div class="wrap center">
+    <div class="reveal">
+      <span class="eyebrow">Download</span>
+      <h1 style="font-size:clamp(40px,6.4vw,80px);margin:22px 0 16px"><span class="grad">Install JARVIS.</span></h1>
+      <p class="lead">Free. Windows 10/11 or macOS 11+. About five minutes, most of it automatic.</p>
+      <div class="actions" style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:28px">
+        <a class="btn primary" href="mailto:samrath.rawatt@gmail.com?subject=JARVIS%20download&body=Hi%20Samrath%2C%20can%20I%20get%20JARVIS%3F%20I%27m%20on%20(Windows%20%2F%20Mac).">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0-4-4m4 4 4-4M4 19h16"/></svg>
+          Request the installer</a>
+      </div>
+      <p class="muted" style="font-size:14px;margin-top:14px">JARVIS is shared personally for now. You'll get a zip with everything inside.</p>
+    </div>
+
+    <div class="os-tabs reveal" role="tablist">
+      <button class="on" data-panel="win">Windows</button>
+      <button data-panel="mac">macOS</button>
+      <button data-panel="android">Android remote</button>
+    </div>
+
+    <div class="panel" id="win">
+      <div class="steps">
+        <div class="s reveal"><div><h3>Unzip JARVIS</h3><p>Extract the zip anywhere, for example your Documents folder.</p></div></div>
+        <div class="s reveal"><div><h3>Install Python 3.12</h3><p>From <a href="https://www.python.org/downloads/">python.org</a>, ticking <em>Add Python to PATH</em>. Then, in the JARVIS folder, run <code>py -3.12 -m pip install -r requirements.txt</code>.</p></div></div>
+        <div class="s reveal"><div><h3>Start JARVIS</h3><p>Double-click <code>Start JARVIS.bat</code>. Paste a free Gemini key from <a href="https://aistudio.google.com/apikey">aistudio.google.com</a> when asked.</p></div></div>
+        <div class="s reveal"><div><h3>Connect your accounts</h3><p>Click the share icon at the top, then CONNECT next to Gmail or Instagram. Sign in in the popup and you're done.</p></div></div>
+      </div>
+    </div>
+
+    <div class="panel" id="mac" hidden>
+      <div class="steps">
+        <div class="s reveal"><div><h3>Unzip JARVIS</h3><p>Double-click the zip in Downloads.</p></div></div>
+        <div class="s reveal"><div><h3>Run the installer</h3><p>Right-click <code>Install JARVIS (Mac).command</code> and choose <b>Open</b>, then <b>Open</b> again. macOS asks the first time because it isn't from the App Store.</p></div></div>
+        <div class="s reveal"><div><h3>Wait a few minutes</h3><p>It installs Python and everything else in your user folder, with no admin password, and puts JARVIS in Applications.</p></div></div>
+        <div class="s reveal"><div><h3>Allow access</h3><p>Allow the Microphone. For Autopilot: System Settings › Privacy &amp; Security › <b>Accessibility</b> and <b>Screen Recording</b> › turn on JARVIS.</p></div></div>
+      </div>
+    </div>
+
+    <div class="panel" id="android" hidden>
+      <div class="steps">
+        <div class="s reveal"><div><h3>Install the APK</h3><p>Copy <code>JARVIS-Remote.apk</code> to your phone and open it. Allow "install unknown apps" for your file manager.</p></div></div>
+        <div class="s reveal"><div><h3>Open Remote Control on the PC</h3><p>In JARVIS, press Remote Control. It shows a Home Wi-Fi address, an Anywhere address and a pairing code.</p></div></div>
+        <div class="s reveal"><div><h3>Connect</h3><p>Type the Anywhere address in the app, trust the certificate once, and enter the 8-character code. Then tap the call button to talk.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:20px">
+  <div class="wrap">
+    <div class="section-head center reveal"><span class="eyebrow">Requirements</span><h2>What you need</h2></div>
+    <div class="grid c3">
+      <div class="card reveal"><h3>A computer</h3><p>Windows 10/11 or macOS 11+, 8 GB RAM recommended, a microphone and speakers.</p></div>
+      <div class="card reveal"><h3>A Gemini key</h3><p>Free from Google AI Studio. JARVIS uses it to think and speak.</p></div>
+      <div class="card reveal"><h3>Optional</h3><p>Google account for Gmail and YouTube. Instagram must be a Business or Creator account linked to a Facebook Page.</p></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <a class="brand" href="index.html" style="display:flex;gap:10px;align-items:center;color:var(--text);font-weight:600;letter-spacing:.22em">
+          <span class="dot" style="width:9px;height:9px;border-radius:50%;background:#fff;box-shadow:0 0 12px 3px rgba(255,255,255,.5)"></span>JARVIS</a>
+        <p style="max-width:320px;margin-top:12px">A personal AI assistant that lives on your own computer. Made by Samrath Rawat.</p>
+      </div>
+      <div><h4>Product</h4><a href="features.html">Features</a><a href="download.html">Download</a><a href="index.html#faq">FAQ</a></div>
+      <div><h4>Trust</h4><a href="security.html">Security</a><a href="privacy.html">Privacy policy</a><a href="terms.html">Terms</a></div>
+      <div><h4>Contact</h4><a href="mailto:samrath.rawatt@gmail.com">Email</a><a href="https://github.com/Samrath777/jarvis-assistant">GitHub</a></div>
+    </div>
+    <div class="fine">
+      <span>© <span data-year>2026</span> JARVIS Assistant. Not affiliated with Marvel or Disney.</span>
+      <span>3D face: MediaPipe canonical face model, © Google, Apache-2.0. 3D: three.js (MIT).</span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
